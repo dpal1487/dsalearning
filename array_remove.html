@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Remove</title>
+</head>
+<script>
+    let data = [1, 2, 3, 4, 5];
+    document.write(data);
+    function removeEle()
+    {
+        let position = document.getElementById('position').value;
+        position = parseInt(position);
+
+        if(position > 0 && position < data.length)
+        {
+            for(let i = position ; i < data.length - 1 ; i++)
+            {
+                data[i] = data[i + 1];
+            }
+    
+            data.length = data.length - 1;
+        }
+        document.write(data);
+    }
+</script>
+<body>
+    <br>
+    <br>
+    <label for="position">Position :</label>
+    <input type="text" name="" id="position">
+    <br>
+    <br>
+    <button type="submit" onclick="removeEle()">Remove Element</button>    
+</body>
+</html>

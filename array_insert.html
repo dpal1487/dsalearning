@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array Insert</title>
     <script>
+        let data = [2, 12, 60, 30, 8, 7, 10];
+        document.write(data);
         function insertEle()
         {
-            let data = [2, 12, 60, 30, 8, 7, 10];
             let newEle = document.getElementById("newEle").value;
             let position = document.getElementById("position").value;
             for (let i = data.length-1; i >= 0; i--){
@@ -22,12 +23,14 @@
             }
             document.write(data)
         }
-
     </script>
 </head>
 <body>
-
-    <input type="text" name="" id="newEle"><br>
+    <br>
+    <br>
+    <label>Elements : </label>
+    <input type="text" name="" id="newEle"><br><br>
+    <label>Position :    </label>
     <input type="text" name="" id="position"><br><br>
     <button type="submit" onclick="insertEle()">Insert Element</button>
 </body>
