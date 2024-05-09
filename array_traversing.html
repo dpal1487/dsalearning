@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing</title>
+    <script>
+        let data = [2, 12, 1, 60, 30, 9, 4, 8, 7, 10, 5];
+        function getElement() {
+            let el = document.getElementById('element').value;
+            if (el > 0) {
+                if (el < data.length && typeof parseInt(el) === "number") {
+                    document.write(data[el], '<br><br>'); //                
+                } else {
+                    document.write("please insert valide data")
+                }
+                for (let i = 0; i < data.length; i++) {
+                    document.write(`Array ${i} is ${data[i]} <br>`);
+                }
+            }
+            else {
+                document.write("please select correct number u can't choose negative number")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <br>
+    <input type="text" id="element">
+    <button onclick="getElement()"> get element </button>
+</body>
+
+</html>
